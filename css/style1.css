@@ -5,12 +5,18 @@ body {
 }
 
 header {
-  background-color: #ef6015; /* Darker orange header */
+  background-color: #ef6015;
   padding: 15px 30px;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed; /* Fix header on top */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 1000;
 }
 
 header h1 {
@@ -28,16 +34,18 @@ header a {
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: calc(100vh - 70px);
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 100px; /* Push form below header */
 }
 
 .form-box {
   background-color: #fff;
   padding: 30px;
-  border-radius: 12px;
-  width: 400px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  width: 420px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  border: 2px solid #ef6015; /* Orange border for highlighting */
 }
 
 .form-box h2 {
